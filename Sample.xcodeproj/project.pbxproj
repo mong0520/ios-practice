@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432F725D233A582D006D6A5D /* cc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 432F725C233A582D006D6A5D /* cc.jpg */; };
 		433CC44623338F48005E6C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC44523338F48005E6C18 /* AppDelegate.swift */; };
 		433CC44823338F48005E6C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC44723338F48005E6C18 /* ViewController.swift */; };
 		433CC44B23338F48005E6C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CC44923338F48005E6C18 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		433CC45023338F49005E6C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CC44E23338F49005E6C18 /* LaunchScreen.storyboard */; };
 		433CC45B23338F49005E6C18 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC45A23338F49005E6C18 /* SampleTests.swift */; };
 		433CC46623338F49005E6C18 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC46523338F49005E6C18 /* SampleUITests.swift */; };
+		4391B7F72334C0E10033A976 /* gacha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4391B7F62334C0E10033A976 /* gacha.jpg */; };
 		43C936B12334B54E007FDFCD /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43C936B02334B54E007FDFCD /* sample.jpg */; };
 		43C936B32334B796007FDFCD /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C936B22334B796007FDFCD /* StatusViewController.swift */; };
 		43C936B52334B7A9007FDFCD /* GachaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C936B42334B7A9007FDFCD /* GachaViewController.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		432F725C233A582D006D6A5D /* cc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cc.jpg; sourceTree = "<group>"; };
 		433CC44223338F48005E6C18 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433CC44523338F48005E6C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		433CC44723338F48005E6C18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		433CC46123338F49005E6C18 /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		433CC46523338F49005E6C18 /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		433CC46723338F49005E6C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4391B7F62334C0E10033A976 /* gacha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gacha.jpg; sourceTree = "<group>"; };
 		43C936B02334B54E007FDFCD /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		43C936B22334B796007FDFCD /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		43C936B42334B7A9007FDFCD /* GachaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				43C936B62334B7BF007FDFCD /* BuyItemViewController.swift */,
 				43C936B82334B7C8007FDFCD /* QuestViewController.swift */,
 				43C936B02334B54E007FDFCD /* sample.jpg */,
+				432F725C233A582D006D6A5D /* cc.jpg */,
+				4391B7F62334C0E10033A976 /* gacha.jpg */,
 				433CC44C23338F49005E6C18 /* Assets.xcassets */,
 				433CC44E23338F49005E6C18 /* LaunchScreen.storyboard */,
 				433CC45123338F49005E6C18 /* Info.plist */,
@@ -247,7 +253,9 @@
 				433CC45023338F49005E6C18 /* LaunchScreen.storyboard in Resources */,
 				433CC44D23338F49005E6C18 /* Assets.xcassets in Resources */,
 				433CC44B23338F48005E6C18 /* Main.storyboard in Resources */,
+				432F725D233A582D006D6A5D /* cc.jpg in Resources */,
 				43C936B12334B54E007FDFCD /* sample.jpg in Resources */,
+				4391B7F72334C0E10033A976 /* gacha.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,32 @@
 
 import UIKit
 
-class GachaViewController: UIViewController {
+class GachaViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    let gacahIDs = ["1", "2", "3", "4"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return gacahIDs.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return gacahIDs[row]
+    }
+    
 
+
+    @IBOutlet weak var gachaID: UIPickerView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gachaID.dataSource = self
+        gachaID.delegate = self
 
         // Do any additional setup after loading the view.
     }

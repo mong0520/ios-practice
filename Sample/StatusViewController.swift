@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Foundation
 
 class StatusViewController: UIViewController {
 
    
+    @IBOutlet weak var uidTextField: UITextField!
+    @IBOutlet weak var tokenTextField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
     
-    @IBOutlet weak var statusTextField: UITextView!
+    struct Response: Codable {
+        var status: Int
+        var data: String
+        var message: String
+        var error_code: String
+    }
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,40 +32,34 @@ class StatusViewController: UIViewController {
     
     
     @IBAction func showMessage() {
-        print("hello")
-        statusTextField.text = """
-        精靈石 = 25555
-        轉蛋卷 = 1193
-        金幣 = 1065970197
-        聖靈幣 = 176263677
-        戒指 = 4360169
-        賭場幣 = 8630054
-        轉蛋幣 = 45377450
-        幸運球 = 131
-        only_friend_disciple = false
-        friendCnt = 71
-        comment = 抽什麼來什麼
-        uzu_key = 0
-        open_id = 185250162
-        name = 把拔＠ＰＴＴ
-        staminaMax = 180
-        cardMax = 1500
-        uid = 1965350
-        heroName = 阿倫
-        lv = 260
-        accept_disciple = true
-        年代塔之記 ID = 17
-        """
+//        print(uidTextField.text!)
+//        print(tokenTextField.text!)
+        
+        let uid = uidTextField.text!
+        let token = tokenTextField.text!
+        let url = URL(string: "http://localhost:8000/login?uid=\(uid)&token=\(token)")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("error: \(error)")
+            } else {
+                if let response = response as? HTTPURLResponse {
+                    print("statusCode: \(response.statusCode)")
+                }
+                let decoder = JSONDecoder()
+                if let data = data, var resp = try? decoder.decode(Response.self, from: data) {
+                    print(resp.data)
+                    DispatchQueue.main.async {
+                        let alertController = UIAlertController(title: "Success", message: "Login success, SID = \(resp.data)", preferredStyle: UIAlertController.Style.alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
+        
+        task.resume()
+        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
