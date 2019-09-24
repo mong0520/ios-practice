@@ -10,6 +10,8 @@ import UIKit
 
 class GachaViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var nameTextField: UILabel!
+    
     let gacahIDs = ["1", "2", "3", "4"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -34,6 +36,10 @@ class GachaViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         gachaID.dataSource = self
         gachaID.delegate = self
+        
+        
+        nameTextField.setNeedsDisplay()
+        nameTextField.text = PlayerName
 
         // Do any additional setup after loading the view.
     }
