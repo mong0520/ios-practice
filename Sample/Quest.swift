@@ -67,11 +67,9 @@ extension Quest {
             }
         }
         
-        let queryString = "測試輪盤"
-        let urlStr = "http://localhost:5000/query_quest?name=\(queryString)"
+        let queryString = ""
+        let urlStr = "http://nt1.me:5000/query_quest?name=\(queryString)"
         let newUrl = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        print("newUrl = \(newUrl)")
-        print("enter here")
         if let url = URL(string: newUrl) {
             print(newUrl)
             let task = URLSession.shared.dataTask(with: url) { (data, response , error) in
@@ -86,7 +84,7 @@ extension Quest {
             sleep(1)
         }
         
-        print(arr)
+//        print(arr)
         return arr
     }
 }
