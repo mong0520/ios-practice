@@ -69,6 +69,7 @@ extension Quest {
         
         let queryString = ""
         let urlStr = "http://nt1.me:5000/query_quest?name=\(queryString)"
+        let semaphore = DispatchSemaphore(value: 0)
         let newUrl = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         if let url = URL(string: newUrl) {
             print(newUrl)
@@ -79,10 +80,10 @@ extension Quest {
                         arr.append(Quest(qtype: quest.questType, qid: quest.questID, qname: quest.name))
                     }
                 }
+                semaphore.signal()
             }
             task.resume()
-            // very workaround
-            sleep(5)
+            semaphore.wait()
         }
         
         print(arr.count)
