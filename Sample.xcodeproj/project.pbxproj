@@ -15,6 +15,12 @@
 		433CC45023338F49005E6C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CC44E23338F49005E6C18 /* LaunchScreen.storyboard */; };
 		433CC45B23338F49005E6C18 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC45A23338F49005E6C18 /* SampleTests.swift */; };
 		433CC46623338F49005E6C18 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC46523338F49005E6C18 /* SampleUITests.swift */; };
+		433F0F88233B670400940F66 /* MVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F82233B670400940F66 /* MVer.swift */; };
+		433F0F89233B670400940F66 /* Earns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F83233B670400940F66 /* Earns.swift */; };
+		433F0F8A233B670400940F66 /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F84233B670400940F66 /* Treasure.swift */; };
+		433F0F8B233B670400940F66 /* PlayQuestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F85233B670400940F66 /* PlayQuestResponse.swift */; };
+		433F0F8C233B670400940F66 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F86233B670400940F66 /* Data.swift */; };
+		433F0F8D233B670400940F66 /* Bonus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F87233B670400940F66 /* Bonus.swift */; };
 		4368F759233B04000044A670 /* QuestQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368F758233B04000044A670 /* QuestQueryViewController.swift */; };
 		4368F75B233B096E0044A670 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368F75A233B096E0044A670 /* QuestTableViewCell.swift */; };
 		4368F75D233B0F670044A670 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368F75C233B0F670044A670 /* Quest.swift */; };
@@ -58,6 +64,12 @@
 		433CC46123338F49005E6C18 /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		433CC46523338F49005E6C18 /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		433CC46723338F49005E6C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		433F0F82233B670400940F66 /* MVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVer.swift; sourceTree = "<group>"; };
+		433F0F83233B670400940F66 /* Earns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earns.swift; sourceTree = "<group>"; };
+		433F0F84233B670400940F66 /* Treasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
+		433F0F85233B670400940F66 /* PlayQuestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayQuestResponse.swift; sourceTree = "<group>"; };
+		433F0F86233B670400940F66 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		433F0F87233B670400940F66 /* Bonus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bonus.swift; sourceTree = "<group>"; };
 		4368F758233B04000044A670 /* QuestQueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestQueryViewController.swift; sourceTree = "<group>"; };
 		4368F75A233B096E0044A670 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		4368F75C233B0F670044A670 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
@@ -117,6 +129,7 @@
 		433CC44423338F48005E6C18 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				433F0F81233B66E100940F66 /* playquest */,
 				433CC44523338F48005E6C18 /* AppDelegate.swift */,
 				433CC44723338F48005E6C18 /* ViewController.swift */,
 				433CC44923338F48005E6C18 /* Main.storyboard */,
@@ -153,6 +166,19 @@
 				433CC46723338F49005E6C18 /* Info.plist */,
 			);
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		433F0F81233B66E100940F66 /* playquest */ = {
+			isa = PBXGroup;
+			children = (
+				433F0F87233B670400940F66 /* Bonus.swift */,
+				433F0F86233B670400940F66 /* Data.swift */,
+				433F0F83233B670400940F66 /* Earns.swift */,
+				433F0F82233B670400940F66 /* MVer.swift */,
+				433F0F85233B670400940F66 /* PlayQuestResponse.swift */,
+				433F0F84233B670400940F66 /* Treasure.swift */,
+			);
+			path = playquest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,11 +316,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4368F75B233B096E0044A670 /* QuestTableViewCell.swift in Sources */,
+				433F0F89233B670400940F66 /* Earns.swift in Sources */,
 				433CC44823338F48005E6C18 /* ViewController.swift in Sources */,
+				433F0F8B233B670400940F66 /* PlayQuestResponse.swift in Sources */,
 				43C936B32334B796007FDFCD /* StatusViewController.swift in Sources */,
 				433CC44623338F48005E6C18 /* AppDelegate.swift in Sources */,
 				43C936B52334B7A9007FDFCD /* GachaViewController.swift in Sources */,
+				433F0F8C233B670400940F66 /* Data.swift in Sources */,
+				433F0F88233B670400940F66 /* MVer.swift in Sources */,
 				43C936B72334B7BF007FDFCD /* BuyItemViewController.swift in Sources */,
+				433F0F8A233B670400940F66 /* Treasure.swift in Sources */,
+				433F0F8D233B670400940F66 /* Bonus.swift in Sources */,
 				4368F759233B04000044A670 /* QuestQueryViewController.swift in Sources */,
 				4368F75D233B0F670044A670 /* Quest.swift in Sources */,
 				43C936B92334B7C8007FDFCD /* QuestViewController.swift in Sources */,

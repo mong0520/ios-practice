@@ -81,10 +81,11 @@ extension Quest {
                 }
             }
             task.resume()
-            sleep(1)
+            // very workaround
+            sleep(5)
         }
         
-//        print(arr)
+        print(arr.count)
         return arr
     }
 }

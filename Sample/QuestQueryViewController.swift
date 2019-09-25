@@ -36,6 +36,50 @@ class QuestQueryViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("selected quest: \(self.result[indexPath.row])")
+        let selectedQuest = self.result[indexPath.row]
+        let controller = UIAlertController(title: "你確定要", message: "進行關卡: \(selectedQuest.qname)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "是的", style: .default) { (_) in
+            print("進行關卡: \(selectedQuest.qname)")
+            
+            let urlQuest = URL(string: "http://nt1.me:5000/play_quest?sid=\(sid)&qtype=\(selectedQuest.qtype)&pt=0&&qid=\(selectedQuest.qid)")!
+            print(urlQuest)
+            let taskStatus = URLSession.shared.dataTask(with: urlQuest) { (data, response, error) in
+                if let error = error {
+                    print("error: \(error)")
+                } else {
+                    if let response = response as? HTTPURLResponse {
+                        print("statusCode: \(response.statusCode)")
+                        
+                        if response.statusCode == 200{
+                            DispatchQueue.main.async {
+                                let alertController = UIAlertController(title: "關卡成功", message: "", preferredStyle: UIAlertController.Style.alert)
+                                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alertController, animated: true, completion: nil)
+                            }
+                        }
+                        else{
+                            DispatchQueue.main.async {
+                                let alertController = UIAlertController(title: "關卡失敗", message: "", preferredStyle: UIAlertController.Style.alert)
+                                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alertController, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
+            taskStatus.resume()
+            
+            
+        }
+        controller.addAction(okAction)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        controller.addAction(cancelAction)
+        present(controller, animated: true, completion: nil)
+    }
+    
 
   
     override func viewDidLoad() {
