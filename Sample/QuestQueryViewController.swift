@@ -12,6 +12,7 @@ class QuestQueryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var questTableView: UITableView!
 
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var quests = Quest.createQuests()
     
@@ -28,6 +29,8 @@ class QuestQueryViewController: UIViewController, UITableViewDelegate, UITableVi
 //        cell.foodNameLabel.text = food[indexPath.row].name
 //        cell.addressLabel.text = food[indexPath.row].address
         cell.questTitle.text = quests[indexPath.row].qname
+        cell.questID.text = String(quests[indexPath.row].qid)
+        cell.questType.text = String(quests[indexPath.row].qtype)
         return cell
     }
     

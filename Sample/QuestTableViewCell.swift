@@ -12,7 +12,9 @@ class QuestTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var questTitle: UILabel!
-//
+    @IBOutlet weak var questID: UILabel!
+    @IBOutlet weak var questType: UILabel!
+    //
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
