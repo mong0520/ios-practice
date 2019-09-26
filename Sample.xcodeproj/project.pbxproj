@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430C2F4C233CBFE60018E7DC /* data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 430C2F4B233CBFE60018E7DC /* data.bundle */; };
 		432F725D233A582D006D6A5D /* cc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 432F725C233A582D006D6A5D /* cc.jpg */; };
 		433CC44623338F48005E6C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC44523338F48005E6C18 /* AppDelegate.swift */; };
 		433CC44823338F48005E6C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CC44723338F48005E6C18 /* ViewController.swift */; };
@@ -19,7 +20,7 @@
 		433F0F89233B670400940F66 /* Earns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F83233B670400940F66 /* Earns.swift */; };
 		433F0F8A233B670400940F66 /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F84233B670400940F66 /* Treasure.swift */; };
 		433F0F8B233B670400940F66 /* PlayQuestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F85233B670400940F66 /* PlayQuestResponse.swift */; };
-		433F0F8C233B670400940F66 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F86233B670400940F66 /* Data.swift */; };
+		433F0F8C233B670400940F66 /* QuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F86233B670400940F66 /* QuestData.swift */; };
 		433F0F8D233B670400940F66 /* Bonus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F0F87233B670400940F66 /* Bonus.swift */; };
 		4368F759233B04000044A670 /* QuestQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368F758233B04000044A670 /* QuestQueryViewController.swift */; };
 		4368F75B233B096E0044A670 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368F75A233B096E0044A670 /* QuestTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430C2F4B233CBFE60018E7DC /* data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = data.bundle; sourceTree = "<group>"; };
 		432F725C233A582D006D6A5D /* cc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cc.jpg; sourceTree = "<group>"; };
 		433CC44223338F48005E6C18 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433CC44523338F48005E6C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		433F0F83233B670400940F66 /* Earns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earns.swift; sourceTree = "<group>"; };
 		433F0F84233B670400940F66 /* Treasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
 		433F0F85233B670400940F66 /* PlayQuestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayQuestResponse.swift; sourceTree = "<group>"; };
-		433F0F86233B670400940F66 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		433F0F86233B670400940F66 /* QuestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		433F0F87233B670400940F66 /* Bonus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bonus.swift; sourceTree = "<group>"; };
 		4368F758233B04000044A670 /* QuestQueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestQueryViewController.swift; sourceTree = "<group>"; };
 		4368F75A233B096E0044A670 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4309A53D233CAD9A00217CCC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		433CC43923338F48005E6C18 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +138,8 @@
 		433CC44423338F48005E6C18 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				430C2F4B233CBFE60018E7DC /* data.bundle */,
+				4309A53D233CAD9A00217CCC /* resources */,
 				433F0F81233B66E100940F66 /* playquest */,
 				433CC44523338F48005E6C18 /* AppDelegate.swift */,
 				433CC44723338F48005E6C18 /* ViewController.swift */,
@@ -172,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				433F0F87233B670400940F66 /* Bonus.swift */,
-				433F0F86233B670400940F66 /* Data.swift */,
+				433F0F86233B670400940F66 /* QuestData.swift */,
 				433F0F83233B670400940F66 /* Earns.swift */,
 				433F0F82233B670400940F66 /* MVer.swift */,
 				433F0F85233B670400940F66 /* PlayQuestResponse.swift */,
@@ -287,6 +298,7 @@
 			files = (
 				433CC45023338F49005E6C18 /* LaunchScreen.storyboard in Resources */,
 				433CC44D23338F49005E6C18 /* Assets.xcassets in Resources */,
+				430C2F4C233CBFE60018E7DC /* data.bundle in Resources */,
 				433CC44B23338F48005E6C18 /* Main.storyboard in Resources */,
 				432F725D233A582D006D6A5D /* cc.jpg in Resources */,
 				43C936B12334B54E007FDFCD /* sample.jpg in Resources */,
@@ -322,7 +334,7 @@
 				43C936B32334B796007FDFCD /* StatusViewController.swift in Sources */,
 				433CC44623338F48005E6C18 /* AppDelegate.swift in Sources */,
 				43C936B52334B7A9007FDFCD /* GachaViewController.swift in Sources */,
-				433F0F8C233B670400940F66 /* Data.swift in Sources */,
+				433F0F8C233B670400940F66 /* QuestData.swift in Sources */,
 				433F0F88233B670400940F66 /* MVer.swift in Sources */,
 				43C936B72334B7BF007FDFCD /* BuyItemViewController.swift in Sources */,
 				433F0F8A233B670400940F66 /* Treasure.swift in Sources */,

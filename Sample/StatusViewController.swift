@@ -95,7 +95,8 @@ class StatusViewController: UIViewController {
 //        activityIndicator = UIActivityIndicatorView(style:
 //            UIActivityIndicatorView.Style.gray)
 //        activityIndicator.center=self.view.center
-//        self.view.addSubview(activityIndicator);
+//        self.view.addSubview(activityIndicator);        
+        
     }
     
 //
